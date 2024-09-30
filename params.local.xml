@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters>
+<!--  <itop_url>http://kip.stn.intra:8080/</itop_url> -->
+  <itop_url>${ITOP_URL}</itop_url>
+  <itop_login>${ITOP_LOGIN}</itop_login>
+  <itop_password>${ITOP_PASSWORD}</itop_password>
+  <default_org_id>STN</default_org_id>
+<!-- Microsoft links -->
+        <microsoft_login_url>https://login.microsoftonline.com/</microsoft_login_url>
+        <microsoft_auth_mode>/oauth2/token</microsoft_auth_mode>
+        <microsoft_resource>https://management.azure.com/</microsoft_resource>
+ 
+        <!-- Client's credentials -->
+        <ms_clientid>${MS_CLIENTID}</ms_clientid>
+        <ms_clientsecret>${MS_CLIENTSECRET}</ms_clientsecret>
+        <ms_tenantid>${MS_TENANTID}</ms_tenantid>  
+		
+<!-- Synchro data source parameters -->
+  <contact_to_notify>manoel.guedes@tesouro.gov.br</contact_to_notify>
+  <synchro_user>${SYNCHRO_USER}</synchro_user>
+  
+  
+   <!-- Subscriptions -->
+  <azuresubscriptionazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+      <provider_id>STN</provider_id>
+      <status>implementation</status>
+    </defaults>
+  </azuresubscriptionazurecollector>
+  
+  <!-- Resources group -->
+  <azureresourcegroupazurecollector>
+    <defaults>
+      <azuresubscription_id></azuresubscription_id>
+      <business_criticity>medium</business_criticity>
+      <org_id>STN</org_id>
+    </defaults>
+  </azureresourcegroupazurecollector>
+  
+ <!-- App Services -->
+  <azureappserviceazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+	  <provisioning_status>succeeded</provisioning_status>
+    </defaults>
+  </azureappserviceazurecollector>
+
+  <!-- Disks -->
+  <azurediskazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurediskazurecollector>
+
+  <!-- Kubernetes services -->
+  <azurekubernetesserviceazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurekubernetesserviceazurecollector>
+
+  <!-- Load balancers -->
+  <azureloadbalancerazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azureloadbalancerazurecollector>
+
+  <!-- Load balancer frontend IP configurations -->
+  <azureloadbalancerfrontendipconfigazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azureloadbalancerfrontendipconfigazurecollector>
+
+  <!-- Locations -->
+  <azurelocationazurecollector>
+    <defaults>
+      <code></code>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurelocationazurecollector>
+
+  <!-- MariaDBs -->
+  <azuremariadbazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azuremariadbazurecollector>
+
+  <!-- MariaDB servers -->
+  <azuremariadbserverazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azuremariadbserverazurecollector>
+
+  <!-- MSSQls -->
+  <azuremssqlazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azuremssqlazurecollector>
+
+  <!-- MSSQl servers -->
+  <azuremssqlserverazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azuremssqlserverazurecollector>
+
+  <!-- MySQLs -->
+  <azuremysqlazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azuremysqlazurecollector>
+
+  <!-- MySQl servers -->
+  <azuremysqlserverazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azuremysqlserverazurecollector>
+
+  <!-- Network interfaces -->
+  <azurenetworkinterfaceazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurenetworkinterfaceazurecollector>
+
+  <!-- Network interface IP configurations -->
+  <azurenetworkinterfaceipconfigazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurenetworkinterfaceipconfigazurecollector>
+
+  <!-- PostgreSQL -->
+  <azurepostgreazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurepostgreazurecollector>
+
+  <!-- PostgreSQL servers -->
+  <azurepostgreserverazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurepostgreserverazurecollector>
+
+  <!-- Private Endpoint -->
+  <azureprivateendpointazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azureprivateendpointazurecollector>
+
+  <!-- Public IP addresses -->
+  <azurepublicipaddressazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurepublicipaddressazurecollector>
+
+  <!-- Resources group -->
+  <azureresourcegroupazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azureresourcegroupazurecollector>
+
+  <!-- SKUs -->
+  <azureskuazurecollector>
+    <location_filter>eastus</location_filter>
+  </azureskuazurecollector>
+
+  <!-- Storage accounts -->
+  <azurestorageaccountazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurestorageaccountazurecollector>
+
+  <!-- Subnets -->
+  <azuresubnetazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azuresubnetazurecollector>
+
+  <!-- Virtual machines -->
+  <azurevirtualmachineazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurevirtualmachineazurecollector>
+
+  <!-- VNETs -->
+  <azurevnetazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurevnetazurecollector>
+
+  <!-- VNET Gateways -->
+  <azurevnetgatewayazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </azurevnetgatewayazurecollector>
+
+  <!-- IPv4 Addresses -->
+  <ipv4addressazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </ipv4addressazurecollector>
+
+  <!-- IPv6 Addresses -->
+  <ipv6addressazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </ipv6addressazurecollector>
+
+  <!-- IPv4 Subnets -->
+  <ipv4subnetazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </ipv4subnetazurecollector>
+
+  <!-- IPv6 Subnets -->
+  <ipv6subnetazurecollector>
+    <defaults>
+      <org_id>STN</org_id>
+    </defaults>
+  </ipv6subnetazurecollector>
+
+  <!-- Class collection sequence -->
+  <collectors_launch_sequence type="array">
+    <!-- Warning: order is important for some classes: 1 to 3 and , the ones listed with numbers or letters; alphabetical order is ok for others -->
+    <!-- Subscriptions -->
+    <collector>
+      <name>AzureSubscriptionAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Locations -->
+    <collector>
+      <name>AzureLocationAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Resources group -->
+    <collector>
+      <name>AzureResourceGroupAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- SKUs -->
+    <collector>
+      <name>AzureSKUAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- App Services -->
+    <collector>
+      <name>AzureAppServiceAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Kubernetes Services -->
+    <collector>
+      <name>AzureKubernetesServiceAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Load Balancers -->
+    <collector>
+      <name>AzureLoadBalancerAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Maria DB Servers -->
+    <collector>
+      <name>AzureMariaDBServerAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Maria DBs -->
+    <collector>
+      <name>AzureMariaDBAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- MySQL DB Servers -->
+    <collector>
+      <name>AzureMySQLServerAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- MySQL DBs -->
+    <collector>
+      <name>AzureMySQLAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- MS SQL DB Servers -->
+    <collector>
+      <name>AzureMSSQLServerAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- MS SQL DBs -->
+    <collector>
+      <name>AzureMSSQLAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- PostgreSQL Servers -->
+    <collector>
+      <name>AzurePostgreServerAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- PostgreSQL DBs -->
+    <collector>
+      <name>AzurePostgreAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Storage Accounts -->
+    <collector>
+      <name>AzureStorageAccountAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Virtual Machines -->
+    <collector>
+      <name>AzureVirtualMachineAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Disks -->
+    <collector>
+      <name>AzureDiskAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Virtual Networks -->
+    <collector>
+      <name>AzureVNetAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Network Interfaces -->
+    <collector>
+      <name>AzureNetworkInterfaceAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Subnets -->
+    <collector>
+      <name>AzureSubnetAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Public IP Addresses -->
+    <collector>
+      <name>AzurePublicIPAddressAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Network Interface IP Configuration -->
+    <collector>
+      <name>AzureNetworkInterfaceIPConfigAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Load Balancer Frontend IP Configuration -->
+    <collector>
+      <name>AzureLoadBalancerFrontendIPConfigAzureCollector</name>
+      <enable>no</enable>
+    </collector>
+    <!-- Virtual Network gateways -->
+    <collector>
+      <name>AzureVNetGatewayAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- Private Endpoint -->
+    <collector>
+      <name>AzurePrivateEndpointAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- IPv4 Subnets -->
+    <collector>
+      <name>IPv4SubnetAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- IPv6 Subnets -->
+    <collector>
+      <name>IPv6SubnetAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- IPv4 Addresses -->
+    <collector>
+      <name>IPv4AddressAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+    <!-- IPv6 Addresses -->
+    <collector>
+      <name>IPv6AddressAzureCollector</name>
+      <enable>yes</enable>
+    </collector>
+  </collectors_launch_sequence>
+    
+        <json_placeholders>
+          <ms_tenantid_short>Tesouro_Nacional</ms_tenantid_short>	
+				  <azureloadbalancerfrontendipconfig_synchro_name>$name_prefix$ LB Frontend IP $name_postfix$</azureloadbalancerfrontendipconfig_synchro_name>
+          <synchro_status>production</synchro_status>
+          <full_load_interval>60</full_load_interval><!-- 7 days (in seconds): 7*24*60*60 = 604800 -->
+        </json_placeholders>
+</parameters>
