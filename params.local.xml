@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <parameters>
-<!--  <itop_url>http://kip.stn.intra:8080/</itop_url> -->
+<!--  <itop_url>https://seu-itop.exemplo.com/</itop_url> -->
   <itop_url>${ITOP_URL}</itop_url>
   <itop_login>${ITOP_LOGIN}</itop_login>
   <itop_password>${ITOP_PASSWORD}</itop_password>
@@ -16,7 +16,7 @@
         <ms_tenantid>${MS_TENANTID}</ms_tenantid>  
 		
 <!-- Synchro data source parameters -->
-  <contact_to_notify>manoel.guedes@tesouro.gov.br</contact_to_notify>
+  <contact_to_notify>${CONTACT_TO_NOTIFY}</contact_to_notify>
   <synchro_user>${SYNCHRO_USER}</synchro_user>
   
   

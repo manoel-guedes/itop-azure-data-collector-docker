@@ -13,21 +13,16 @@ COPY combodo-azure-data-collector-2_0_1.zip params.local.xml /tmp/
 # - Move the configuration file to the appropriate location
 # - Remove the zip file to clean up
 # - Clean up apt-get cache and remove unnecessary files to reduce image size
-RUN apt-get update && apt-get install -y unzip libxml2-dev \
+RUN apt-get update && apt-get install -y unzip libxml2-dev gettext-base \
 	&& docker-php-ext-install soap \
 	&& unzip /tmp/combodo-azure-data-collector-2_0_1.zip -d /var/www/html/ \
-	&& mv /tmp/params.local.xml /var/www/html/combodo-azure-data-collector/conf/params.local.xml \
+	&& mv /tmp/params.local.xml /var/www/html/combodo-azure-data-collector/conf/params.local.xml.template \
 	&& rm /tmp/combodo-azure-data-collector-2_0_1.zip \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
-# Load environment variables from the .env file and set them as Docker environment variables.
-# The `cat .env | xargs` command reads the .env file and converts its contents into a format
-# that can be used by the `ENV` instruction to set multiple environment variables at once.
-ENV $(cat .env | xargs)
-
 # Set the working directory to /var/www/html/combodo-azure-data-collector
 WORKDIR /var/www/html/combodo-azure-data-collector
 
-# Run the Azure data collector and terminate the container
-CMD ["php", "exec.php"]
+# Substitute env vars in params.local.xml at startup, then run the collector
+CMD ["/bin/sh", "-c", "envsubst < conf/params.local.xml.template > conf/params.local.xml && php -d memory_limit=1G exec.php"]

@@ -1,6 +1,12 @@
 # Ignorar o arquivo .env
 .env
 
+# Script de deploy contém credenciais em texto claro
+deploy.ps1
+
+# Pacote binário do collector — baixar do iTop Hub
+combodo-azure-data-collector-*.zip
+
 # Ignorar diretórios e arquivos comuns
 node_modules/
 vendor/
